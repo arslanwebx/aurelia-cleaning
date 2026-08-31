@@ -538,6 +538,374 @@
     }
 
     /* =========================================================================
+       LUXURY BEFORE & AFTER TRANSFORMATION SECTION (3RD SECTION)
+       ========================================================================= */
+    .transformation-section {
+      background: radial-gradient(circle at 10% 20%, rgba(234, 243, 240, 0.65) 0%, #ffffff 60%, rgba(250, 246, 237, 0.7) 100%);
+      position: relative;
+      overflow: hidden;
+      border-bottom: 1px solid var(--line);
+    }
+    .transformation-section::before {
+      content: "";
+      position: absolute;
+      top: -120px;
+      left: -100px;
+      width: 450px;
+      height: 450px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(197, 160, 89, 0.08) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .transformation-section::after {
+      content: "";
+      position: absolute;
+      bottom: -150px;
+      right: -100px;
+      width: 500px;
+      height: 500px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(21, 70, 62, 0.06) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .transformation-split {
+      display: grid;
+      grid-template-columns: 1.12fr 0.88fr;
+      gap: 52px;
+      align-items: center;
+      position: relative;
+      z-index: 2;
+    }
+
+    /* Comparison Container & Visuals */
+    .transformation-visual {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .comparison-container {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 4 / 3;
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      box-shadow: 0 20px 50px rgba(11, 32, 28, 0.12), 0 4px 14px rgba(197, 160, 89, 0.08);
+      border: 1.5px solid rgba(197, 160, 89, 0.35);
+      user-select: none;
+      -webkit-user-select: none;
+      touch-action: pan-y;
+      background: #0b201c;
+      --pos: 50%;
+    }
+
+    .comparison-img-layer {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    .comparison-img-layer img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      pointer-events: none;
+    }
+
+    .comparison-after {
+      z-index: 1;
+    }
+
+    .comparison-before {
+      z-index: 2;
+      clip-path: inset(0 calc(100% - var(--pos)) 0 0);
+      -webkit-clip-path: inset(0 calc(100% - var(--pos)) 0 0);
+      will-change: clip-path;
+    }
+
+    /* Comparison Slider Divider & Handle */
+    .comparison-divider {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: var(--pos);
+      width: 3px;
+      background: linear-gradient(180deg, rgba(255, 216, 138, 0.95) 0%, rgba(255, 255, 255, 1) 50%, rgba(255, 216, 138, 0.95) 100%);
+      transform: translateX(-50%);
+      z-index: 10;
+      box-shadow: 0 0 16px rgba(0, 0, 0, 0.4), 0 0 8px rgba(197, 160, 89, 0.6);
+      pointer-events: none;
+      will-change: left;
+    }
+
+    .comparison-handle {
+      position: absolute;
+      top: 50%;
+      left: var(--pos);
+      transform: translate(-50%, -50%);
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #184c43 0%, #0b201c 100%);
+      border: 2px solid #ffd88a;
+      box-shadow: 0 6px 20px rgba(7, 22, 20, 0.45), 0 0 0 4px rgba(255, 255, 255, 0.25);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 3px;
+      color: #faf5ea;
+      cursor: ew-resize;
+      z-index: 12;
+      transition: transform 0.15s ease, box-shadow 0.15s ease;
+      will-change: left, transform;
+    }
+
+    .comparison-container:hover .comparison-handle,
+    .comparison-container.is-dragging .comparison-handle {
+      transform: translate(-50%, -50%) scale(1.08);
+      box-shadow: 0 8px 24px rgba(7, 22, 20, 0.55), 0 0 0 6px rgba(197, 160, 89, 0.35);
+    }
+
+    .handle-arrow {
+      width: 14px;
+      height: 14px;
+      flex-shrink: 0;
+    }
+
+    /* Comparison Badges */
+    .comparison-badge {
+      position: absolute;
+      top: 18px;
+      z-index: 8;
+      padding: 6px 14px;
+      border-radius: 100px;
+      font-size: 0.76rem;
+      font-weight: 800;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      pointer-events: none;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      transition: opacity 0.2s ease;
+    }
+
+    .badge-before {
+      left: 18px;
+      background: rgba(11, 32, 28, 0.78);
+      color: #fce7e7;
+      border: 1px solid rgba(255, 255, 255, 0.25);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    }
+    .badge-before-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: #ff6b6b;
+      box-shadow: 0 0 6px #ff6b6b;
+    }
+
+    .badge-after {
+      right: 18px;
+      background: rgba(21, 70, 62, 0.88);
+      color: #ffffff;
+      border: 1px solid rgba(197, 160, 89, 0.55);
+      box-shadow: 0 4px 16px rgba(11, 32, 28, 0.3);
+    }
+    .badge-after-sparkle {
+      color: #ffd88a;
+      font-size: 0.9rem;
+    }
+
+    /* Native Range Overlay for Keyboard & Accessibility */
+    .comparison-range-slider {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+      cursor: ew-resize;
+      z-index: 15;
+      margin: 0;
+    }
+    .comparison-range-slider:focus-visible + .comparison-handle {
+      outline: 3px solid #ffd88a;
+      outline-offset: 4px;
+    }
+
+    /* Interactive Cue Hint */
+    .comparison-hint {
+      position: absolute;
+      bottom: 18px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 8;
+      background: rgba(11, 32, 28, 0.78);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      color: #ede6d6;
+      border: 1px solid rgba(197, 160, 89, 0.3);
+      padding: 5px 14px;
+      border-radius: 100px;
+      font-size: 0.74rem;
+      font-weight: 700;
+      letter-spacing: 0.03em;
+      pointer-events: none;
+      display: flex;
+      align-items: center;
+      gap: 7px;
+      transition: opacity 0.3s ease;
+    }
+    .comparison-container.is-dragging .comparison-hint {
+      opacity: 0;
+    }
+
+    /* Preset Quick-Buttons Bar */
+    .preset-toolbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      background: var(--white);
+      border: 1px solid var(--line);
+      padding: 10px 14px;
+      border-radius: 14px;
+      box-shadow: var(--shadow-sm);
+    }
+    .preset-toolbar-label {
+      font-size: 0.8rem;
+      font-weight: 700;
+      color: var(--text-muted);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .preset-btn-group {
+      display: flex;
+      gap: 6px;
+    }
+    .preset-btn {
+      padding: 6px 14px;
+      border-radius: 100px;
+      border: 1px solid var(--line);
+      background: var(--surface);
+      color: var(--ink);
+      font-size: 0.78rem;
+      font-weight: 700;
+      transition: all 0.2s ease;
+    }
+    .preset-btn:hover {
+      border-color: var(--green);
+      background: var(--green-soft);
+      color: var(--green-dark);
+      transform: translateY(-1px);
+    }
+    .preset-btn.active {
+      background: var(--green);
+      color: white;
+      border-color: var(--green);
+      box-shadow: 0 4px 10px rgba(21, 70, 62, 0.2);
+    }
+
+    /* Transformation Copy Details (Right Side) */
+    .transformation-content {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    .transformation-content h2 {
+      margin-bottom: 8px;
+    }
+    .transformation-content .lead {
+      margin-bottom: 6px;
+      color: #3d524d;
+    }
+
+    .transformation-pillars {
+      display: grid;
+      gap: 12px;
+      margin: 4px 0;
+    }
+    .transformation-pillar {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      padding: 15px 16px;
+      background: var(--white);
+      border: 1px solid var(--line);
+      border-radius: var(--radius-sm);
+      box-shadow: 0 2px 8px rgba(11, 32, 28, 0.03);
+      transition: all 0.25s ease;
+    }
+    .transformation-pillar:hover {
+      border-color: rgba(21, 70, 62, 0.25);
+      box-shadow: var(--shadow-sm);
+      transform: translateX(4px);
+    }
+    .trans-pillar-icon {
+      display: grid;
+      place-items: center;
+      width: 38px;
+      height: 38px;
+      border-radius: 10px;
+      background: var(--green-soft);
+      border: 1px solid rgba(21, 70, 62, 0.14);
+      color: var(--green);
+      flex-shrink: 0;
+    }
+    .trans-pillar-icon svg {
+      width: 19px;
+      height: 19px;
+    }
+    .trans-pillar-text h4 {
+      margin: 0 0 3px;
+      font-family: var(--font-heading);
+      font-size: 1.02rem;
+      font-weight: 750;
+      color: var(--ink);
+    }
+    .trans-pillar-text p {
+      margin: 0;
+      font-size: 0.88rem;
+      line-height: 1.5;
+      color: var(--text);
+    }
+
+    .transformation-proof-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      padding: 11px 16px;
+      background: var(--gold-soft);
+      border: 1px solid var(--gold-border);
+      border-radius: var(--radius-sm);
+      width: fit-content;
+    }
+    .trans-proof-stars {
+      color: var(--gold-dark);
+      font-size: 0.95rem;
+      letter-spacing: 2px;
+    }
+    .trans-proof-copy {
+      font-size: 0.84rem;
+      font-weight: 700;
+      color: #433315;
+    }
+
+    .transformation-actions {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 12px;
+      margin-top: 4px;
+    }
+
+    /* =========================================================================
        LUXURY SERVICES SECTION
        ========================================================================= */
     .services-grid {
@@ -1471,7 +1839,7 @@
       .menu-toggle { display: block; }
       .nav-actions { display: none; }
       
-      .about-split, .area-grid, .faq-split, .quote-split { grid-template-columns: 1fr; gap: 44px; }
+      .transformation-split, .about-split, .area-grid, .faq-split, .quote-split { grid-template-columns: 1fr; gap: 44px; }
       .trust-grid { grid-template-columns: 1fr 1fr; }
       .trust-item:nth-child(2) { border-right: 0; }
       .trust-item:nth-child(-n+2) { border-bottom: 1px solid var(--line-subtle); }
@@ -1571,6 +1939,7 @@
       </a>
 
       <nav class="nav-links" id="navLinks" aria-label="Primary navigation">
+        <a href="#transformation">Transformation</a>
         <a href="#services">Services</a>
         <a href="#about">Why Us</a>
         <a href="#process">Process</a>
@@ -1658,6 +2027,136 @@
           <div class="trust-info">
             <strong>San Angelo & Estates</strong>
             <span>Locally Owned & Operated</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         LUXURY BEFORE & AFTER TRANSFORMATION SECTION (SECTION 3)
+         ======================================================================= -->
+    <section class="section transformation-section" id="transformation" aria-label="Before and after home cleaning transformation">
+      <div class="container transformation-split">
+        <!-- LEFT: INTERACTIVE BEFORE/AFTER SLIDER -->
+        <div class="transformation-visual">
+          <div class="comparison-container" id="beforeAfterSlider" style="--pos: 50%;">
+            <!-- BASE: AFTER CLEANED LAYER -->
+            <div class="comparison-img-layer comparison-after">
+              <img src="images/cleaned.webp" alt="Cleaned and impeccably styled luxury living room in San Angelo" width="1200" height="900" loading="lazy">
+            </div>
+
+            <!-- TOP: BEFORE UNCLEAN LAYER (CLIPPED) -->
+            <div class="comparison-img-layer comparison-before" id="comparisonBeforeLayer">
+              <img src="images/unclean.webp" alt="Uncleaned living room with clutter and debris before professional cleaning" width="1200" height="900" loading="lazy">
+            </div>
+
+            <!-- BADGES -->
+            <div class="comparison-badge badge-before">
+              <span class="badge-before-dot"></span>
+              <span>Before Clean</span>
+            </div>
+            <div class="comparison-badge badge-after">
+              <span class="badge-after-sparkle">✨</span>
+              <span>After Sugar Standard</span>
+            </div>
+
+            <!-- SLIDER DIVIDER & DRAG HANDLE -->
+            <div class="comparison-divider" id="comparisonDivider" aria-hidden="true"></div>
+            
+            <div class="comparison-handle" id="comparisonHandle" aria-hidden="true">
+              <svg class="handle-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="15 18 9 12 15 6"></polyline>
+              </svg>
+              <svg class="handle-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="9 18 15 12 9 6"></polyline>
+              </svg>
+            </div>
+
+            <!-- ACCESSIBLE RANGE INPUT -->
+            <input type="range" min="0" max="100" value="50" class="comparison-range-slider" id="comparisonRange" aria-label="Interactive before and after comparison slider. Adjust to reveal the cleaned living room.">
+
+            <!-- INTERACTIVE HINT -->
+            <div class="comparison-hint" id="comparisonHint">
+              <svg style="width:14px;height:14px;fill:currentColor;" viewBox="0 0 24 24"><path d="M10 9h4V6h3l-5-5-5 5h3v3zm-1 1H6V7l-5 5 5 5v-3h3v-4zm14 2l-5-5v3h-3v4h3v3l5-5zm-9 3h-4v3H7l5 5 5-5h-3v-3z"/></svg>
+              <span>Drag or slide to compare</span>
+            </div>
+          </div>
+
+          <!-- PRESET QUICK SELECTOR TOOLBAR -->
+          <div class="preset-toolbar">
+            <span class="preset-toolbar-label">
+              <svg style="width:15px;height:15px;color:var(--gold);" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+              <span>Instant View:</span>
+            </span>
+            <div class="preset-btn-group" role="group" aria-label="Comparison presets">
+              <button type="button" class="preset-btn" data-preset="100">Before Mess</button>
+              <button type="button" class="preset-btn active" data-preset="50">50/50 Split</button>
+              <button type="button" class="preset-btn" data-preset="0">Pristine Clean ✨</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- RIGHT: LUXURY EDITORIAL COPY & VALUE PILLARS -->
+        <div class="transformation-content">
+          <div>
+            <p class="kicker"><span class="kicker-dot"></span> The Sugar Standard</p>
+            <h2>The Difference Is In The Details.</h2>
+            <p class="lead">A true luxury clean isn't just about surface tidying — it’s the tranquil feeling of walking into a completely revitalized sanctuary where every detail radiates calm.</p>
+          </div>
+
+          <div class="transformation-pillars">
+            <div class="transformation-pillar">
+              <div class="trans-pillar-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+                </svg>
+              </div>
+              <div class="trans-pillar-text">
+                <h4>Master-Level Precision Cleaning</h4>
+                <p>From coffee table styling and immaculate rug vacuuming to streak-free glass and deep baseboard care, we erase the daily clutter completely.</p>
+              </div>
+            </div>
+
+            <div class="transformation-pillar">
+              <div class="trans-pillar-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                  <polyline points="14 2 14 8 20 8"></polyline>
+                  <line x1="16" y1="13" x2="8" y2="13"></line>
+                  <line x1="16" y1="17" x2="8" y2="17"></line>
+                  <polyline points="10 9 9 9 8 9"></polyline>
+                </svg>
+              </div>
+              <div class="trans-pillar-text">
+                <h4>West Texas Dust & Allergen Relief</h4>
+                <p>Equipped with specialized microfiber traps and floor conditioning that lift stubborn desert dust, pet hair, and airborne particles with zero residue.</p>
+              </div>
+            </div>
+
+            <div class="transformation-pillar">
+              <div class="trans-pillar-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                </svg>
+              </div>
+              <div class="trans-pillar-text">
+                <h4>Boutique Sanctuary Presentation</h4>
+                <p>Pillows fluffed, throws draped, décor curated with symmetry, and spaces infused with pristine, refreshing ambiance for effortless luxury living.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="transformation-proof-badge">
+            <span class="trans-proof-stars">★★★★★</span>
+            <span class="trans-proof-copy">Verified 5.0 Rating · 31 Happy San Angelo Families</span>
+          </div>
+
+          <div class="transformation-actions">
+            <a class="btn btn-primary" href="#quote">Get Your Home Transformation</a>
+            <a class="btn btn-secondary" href="tel:+13257165712">
+              <svg style="width:15px;height:15px;color:var(--green);" viewBox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+              <span>Call (325) 716-5712</span>
+            </a>
           </div>
         </div>
       </div>
@@ -2356,6 +2855,7 @@
         <div>
           <div class="footer-title">Experience</div>
           <div class="footer-links">
+            <a href="#transformation">Before & After</a>
             <a href="#about">Why Us</a>
             <a href="#process">How It Works</a>
             <a href="#reviews">Google Reviews (5.0)</a>
@@ -2480,6 +2980,103 @@
       document.getElementById("successMessage").style.display = "block";
       window.location.href = `sms:+13257165712?body=${encodeURIComponent(lines.join("\n"))}`;
     });
+
+    // =========================================================================
+    // BEFORE & AFTER INTERACTIVE COMPARISON SLIDER
+    // =========================================================================
+    const sliderContainer = document.getElementById("beforeAfterSlider");
+    const rangeInput = document.getElementById("comparisonRange");
+    const presetButtons = document.querySelectorAll(".preset-btn");
+    const hintElement = document.getElementById("comparisonHint");
+
+    function setSliderPosition(pos, updateRange = true) {
+      const clampedPos = Math.max(0, Math.min(100, pos));
+      sliderContainer.style.setProperty("--pos", `${clampedPos}%`);
+      if (updateRange && rangeInput) {
+        rangeInput.value = clampedPos;
+      }
+      
+      // Update active preset button state
+      presetButtons.forEach(btn => {
+        const btnVal = parseFloat(btn.getAttribute("data-preset"));
+        if (Math.abs(btnVal - clampedPos) < 2) {
+          btn.classList.add("active");
+        } else {
+          btn.classList.remove("active");
+        }
+      });
+    }
+
+    if (rangeInput && sliderContainer) {
+      // Range input listener for smooth slider and keyboard accessibility
+      rangeInput.addEventListener("input", (e) => {
+        setSliderPosition(parseFloat(e.target.value), false);
+        if (hintElement) hintElement.style.opacity = "0";
+      });
+
+      // Pointer drag interaction
+      let isDragging = false;
+
+      function updateFromPointer(clientX) {
+        const rect = sliderContainer.getBoundingClientRect();
+        const offsetX = clientX - rect.left;
+        const percentage = (offsetX / rect.width) * 100;
+        setSliderPosition(percentage, true);
+      }
+
+      sliderContainer.addEventListener("pointerdown", (e) => {
+        isDragging = true;
+        sliderContainer.classList.add("is-dragging");
+        sliderContainer.setPointerCapture(e.pointerId);
+        updateFromPointer(e.clientX);
+        if (hintElement) hintElement.style.opacity = "0";
+      });
+
+      sliderContainer.addEventListener("pointermove", (e) => {
+        if (!isDragging) return;
+        updateFromPointer(e.clientX);
+      });
+
+      const stopDragging = (e) => {
+        if (isDragging) {
+          isDragging = false;
+          sliderContainer.classList.remove("is-dragging");
+          try {
+            sliderContainer.releasePointerCapture(e.pointerId);
+          } catch(err) {}
+        }
+      };
+
+      sliderContainer.addEventListener("pointerup", stopDragging);
+      sliderContainer.addEventListener("pointercancel", stopDragging);
+
+      // Preset button handlers with smooth animation
+      presetButtons.forEach(button => {
+        button.addEventListener("click", () => {
+          const targetPos = parseFloat(button.getAttribute("data-preset"));
+          if (isNaN(targetPos)) return;
+          
+          if (hintElement) hintElement.style.opacity = "0";
+
+          const currentPos = parseFloat(rangeInput.value) || 50;
+          const startTime = performance.now();
+          const duration = 280;
+
+          function animateStep(now) {
+            const elapsed = now - startTime;
+            const progress = Math.min(elapsed / duration, 1);
+            const ease = 1 - Math.pow(1 - progress, 3);
+            const nextPos = currentPos + (targetPos - currentPos) * ease;
+            setSliderPosition(nextPos, true);
+
+            if (progress < 1) {
+              requestAnimationFrame(animateStep);
+            }
+          }
+          requestAnimationFrame(animateStep);
+        });
+      });
+    }
 
     // Dynamic copyright year
     document.getElementById("year").textContent = new Date().getFullYear();
