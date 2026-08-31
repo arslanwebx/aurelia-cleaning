@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#0d2823">
+  <meta name="theme-color" content="#0b201c">
   <meta name="description" content="Sugar In The Morning Cleaning Service provides premier, detailed residential cleaning in San Angelo, Texas. Request a personalized cleaning quote or call (325) 716-5712.">
   <meta property="og:title" content="Sugar In The Morning Cleaning Service | San Angelo, TX">
   <meta property="og:description" content="White-glove, dependable house cleaning for San Angelo homes and estates.">
@@ -12,7 +12,7 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Figtree:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Figtree:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
   <script type="application/ld+json">
   {
@@ -46,48 +46,50 @@
 
   <style>
     :root {
-      --font-body: "Plus Jakarta Sans", "Figtree", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-      --font-serif: "Cormorant Garamond", Georgia, "Times New Roman", serif;
+      /* Smooth Modern Luxury Typography */
+      --font-heading: "Outfit", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      --font-body: "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
       --font-hero: "Figtree", "Avenir Next", Helvetica, sans-serif;
       
-      /* Luxury Obsidian & Emerald Palette */
-      --ink: #0b1c19;
-      --ink-subtle: #1c332e;
-      --text: #4a5c57;
-      --text-light: #70837e;
+      /* Refined Obsidian & Emerald Luxury Palette */
+      --ink: #0b201c;
+      --ink-soft: #18332d;
+      --text: #485c57;
+      --text-muted: #6f837e;
       
-      --green: #1a564c;
-      --green-dark: #0d2823;
-      --green-deep: #071916;
+      --green-dark: #071614;
+      --green-deep: #0b201c;
+      --green: #15463e;
+      --green-accent: #1e5e54;
+      --green-light: #2c7a6e;
       --green-soft: #eaf3f0;
-      --green-tint: #f0f6f4;
-      --green-accent: #267a6c;
+      --green-tint: #f1f7f5;
       
-      /* Champagne & Warm Gold Palette */
+      /* Subtle Warm Champagne Gold */
       --gold: #c5a059;
-      --gold-light: #ecd5a7;
-      --gold-dark: #9a762f;
-      --gold-soft: #fcf9f2;
-      --gold-border: rgba(197, 160, 89, 0.35);
+      --gold-light: #e8cf96;
+      --gold-dark: #9e7a32;
+      --gold-soft: #faf6ed;
+      --gold-border: rgba(197, 160, 89, 0.3);
       
       --sand: #d9b16a;
-      --cream: #faf9f5;
+      --cream: #faf9f6;
       --white: #ffffff;
       
-      --line: #e2ece7;
-      --line-subtle: rgba(226, 236, 231, 0.7);
-      --surface: #f5f8f6;
+      --line: #e3ece8;
+      --line-subtle: rgba(227, 236, 232, 0.7);
+      --surface: #f4f8f6;
       --surface-card: #ffffff;
       
-      --max: 1220px;
+      --max: 1240px;
       --radius: 16px;
       --radius-sm: 10px;
       --radius-lg: 24px;
       
-      --shadow-sm: 0 4px 16px rgba(11, 28, 25, 0.04);
-      --shadow-md: 0 14px 36px rgba(11, 28, 25, 0.08);
-      --shadow-lg: 0 24px 60px rgba(11, 28, 25, 0.12);
-      --shadow-gold: 0 10px 28px rgba(197, 160, 89, 0.22);
+      --shadow-sm: 0 4px 16px rgba(11, 32, 28, 0.04);
+      --shadow-md: 0 12px 36px rgba(11, 32, 28, 0.07);
+      --shadow-lg: 0 24px 60px rgba(11, 32, 28, 0.11);
+      --shadow-gold: 0 10px 28px rgba(197, 160, 89, 0.2);
     }
 
     * { box-sizing: border-box; }
@@ -100,6 +102,7 @@
       font-size: 16px;
       line-height: 1.65;
       -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
       text-rendering: optimizeLegibility;
       overflow-x: hidden;
     }
@@ -110,22 +113,23 @@
     button { cursor: pointer; }
     h1, h2, h3, h4, p { margin-top: 0; }
     
-    /* Section Headings */
+    /* Smooth Headings */
     h2 {
-      font-family: var(--font-serif);
-      font-size: clamp(2.35rem, 4.5vw, 3.85rem);
-      font-weight: 600;
-      line-height: 1.1;
-      letter-spacing: -0.015em;
-      margin-bottom: 20px;
+      font-family: var(--font-heading);
+      font-size: clamp(2.1rem, 3.8vw, 3.3rem);
+      font-weight: 700;
+      line-height: 1.15;
+      letter-spacing: -0.025em;
+      margin-bottom: 18px;
       color: var(--ink);
     }
     
     h3 {
-      font-size: 1.25rem;
+      font-family: var(--font-heading);
+      font-size: 1.28rem;
       font-weight: 700;
       line-height: 1.3;
-      margin-bottom: 12px;
+      margin-bottom: 10px;
       color: var(--ink);
       letter-spacing: -0.015em;
     }
@@ -134,14 +138,14 @@
     strong { color: var(--ink); }
 
     .container { width: min(calc(100% - 48px), var(--max)); margin-inline: auto; }
-    .section { padding: 110px 0; position: relative; }
+    .section { padding: 104px 0; position: relative; }
     .section-soft { background: var(--surface); }
     .section-white { background: var(--white); }
     .section-dark {
-      background: linear-gradient(175deg, #0d2823 0%, #071916 100%);
+      background: linear-gradient(175deg, #0b201c 0%, #061513 100%);
       color: var(--white);
     }
-    .section-dark p, .section-dark .kicker { color: rgba(255,255,255, 0.78); }
+    .section-dark p, .section-dark .kicker { color: rgba(255, 255, 255, 0.78); }
     .section-dark h2, .section-dark h3, .section-dark strong { color: var(--white); }
 
     .skip-link {
@@ -151,33 +155,31 @@
     }
     .skip-link:focus { top: 0; }
 
-    /* Luxury Kicker Badge */
+    /* Refined Kicker Badge */
     .kicker {
       display: inline-flex;
       align-items: center;
       gap: 8px;
-      margin-bottom: 16px;
+      margin-bottom: 14px;
       color: var(--green);
-      font-size: 0.8rem;
+      font-size: 0.78rem;
       font-weight: 800;
-      letter-spacing: 0.16em;
+      letter-spacing: 0.14em;
       text-transform: uppercase;
     }
     .kicker-gold {
-      color: var(--gold-dark);
+      color: var(--gold-light);
     }
-    .kicker::before {
-      content: "";
+    .kicker-dot {
       display: inline-block;
-      width: 7px;
-      height: 7px;
+      width: 6px;
+      height: 6px;
       background: var(--gold);
       border-radius: 50%;
-      box-shadow: 0 0 10px var(--gold);
     }
 
-    .lead { max-width: 680px; font-size: clamp(1.05rem, 1.4vw, 1.2rem); line-height: 1.7; }
-    .section-head { max-width: 760px; margin-bottom: 54px; }
+    .lead { max-width: 680px; font-size: clamp(1.04rem, 1.35vw, 1.18rem); line-height: 1.7; }
+    .section-head { max-width: 760px; margin-bottom: 50px; }
     .section-head.center { text-align: center; margin-inline: auto; }
     .section-head.center .lead { margin-inline: auto; }
     .section-head.center .kicker { justify-content: center; }
@@ -185,41 +187,42 @@
     /* Announcement Bar */
     .announcement {
       background: var(--green-dark);
-      color: #f1ebd9;
-      font-size: 0.84rem;
+      color: #ede6d6;
+      font-size: 0.82rem;
       font-weight: 600;
       letter-spacing: 0.02em;
       text-align: center;
-      border-bottom: 1px solid rgba(197, 160, 89, 0.25);
+      border-bottom: 1px solid rgba(197, 160, 89, 0.22);
     }
     .announcement .container {
-      padding: 10px 0;
+      padding: 9px 0;
       display: flex;
       justify-content: center;
       align-items: center;
       gap: 12px;
-      flex-wrap: wrap;
+      white-space: nowrap;
     }
     .announcement-badge {
       display: inline-flex;
       align-items: center;
-      gap: 5px;
-      background: rgba(197, 160, 89, 0.18);
+      background: rgba(197, 160, 89, 0.16);
       border: 1px solid rgba(197, 160, 89, 0.35);
       color: #ffd88a;
-      padding: 2px 10px;
+      padding: 2px 9px;
       border-radius: 100px;
-      font-size: 0.74rem;
+      font-size: 0.72rem;
       text-transform: uppercase;
       letter-spacing: 0.06em;
       font-weight: 700;
     }
 
-    /* Luxury Header */
+    /* =========================================================================
+       FLAWLESS HEADER & NAVIGATION (ZERO WRAP, PERFECT LUXURY ALIGNMENT)
+       ========================================================================= */
     header {
       position: sticky; top: 0; z-index: 1000;
-      border-bottom: 1px solid rgba(226, 236, 231, 0.85);
-      background: rgba(255, 255, 255, 0.94);
+      border-bottom: 1px solid rgba(227, 236, 232, 0.85);
+      background: rgba(255, 255, 255, 0.95);
       backdrop-filter: blur(16px);
       -webkit-backdrop-filter: blur(16px);
       transition: all 0.3s ease;
@@ -228,56 +231,66 @@
       min-height: 82px;
       display: flex;
       align-items: center;
-      gap: 28px;
+      justify-content: space-between;
+      gap: 20px;
     }
     .brand {
       display: flex;
       align-items: center;
-      gap: 14px;
-      flex: 0 0 auto;
+      gap: 13px;
+      flex-shrink: 0;
+      white-space: nowrap;
       transition: transform 0.2s ease;
     }
     .brand:hover { transform: translateY(-1px); }
     .brand-mark {
       display: grid; place-items: center;
-      width: 44px; height: 44px;
-      border-radius: 12px;
-      background: linear-gradient(135deg, #1f6259 0%, #0d2823 100%);
-      border: 1.5px solid rgba(197, 160, 89, 0.5);
+      width: 42px; height: 42px;
+      border-radius: 11px;
+      background: linear-gradient(135deg, #184c43 0%, #0b201c 100%);
+      border: 1.5px solid rgba(197, 160, 89, 0.45);
       color: #faf5ea;
-      font-family: var(--font-serif);
-      font-weight: 700;
-      font-size: 1.55rem;
-      box-shadow: 0 4px 14px rgba(13, 40, 35, 0.18);
+      font-family: var(--font-heading);
+      font-weight: 800;
+      font-size: 1.35rem;
+      box-shadow: 0 4px 12px rgba(11, 32, 28, 0.15);
     }
     .brand-copy { line-height: 1.15; }
     .brand-name {
       display: block;
+      font-family: var(--font-heading);
       font-size: 1.05rem;
       font-weight: 800;
-      letter-spacing: -0.01em;
+      letter-spacing: -0.015em;
       color: var(--ink);
     }
     .brand-sub {
       display: flex;
       align-items: center;
-      gap: 6px;
-      margin-top: 4px;
-      color: var(--text-light);
+      gap: 5px;
+      margin-top: 3px;
+      color: var(--text-muted);
       font-size: 0.72rem;
       font-weight: 600;
+      letter-spacing: 0.04em;
       text-transform: uppercase;
-      letter-spacing: 0.05em;
     }
     .brand-sub-dot { color: var(--gold); }
 
-    .nav-links { display: flex; align-items: center; gap: 28px; margin-left: auto; }
+    /* Center Nav Links */
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      white-space: nowrap;
+    }
     .nav-links > a:not(.btn) {
-      color: #2b4540;
-      font-size: 0.94rem;
-      font-weight: 650;
+      color: #2e443f;
+      font-size: 0.93rem;
+      font-weight: 600;
       position: relative;
       padding: 6px 0;
+      white-space: nowrap;
       transition: color 0.2s ease;
     }
     .nav-links > a:not(.btn)::after {
@@ -292,17 +305,27 @@
     .nav-links > a:not(.btn):hover { color: var(--green); }
     .nav-links > a:not(.btn):hover::after { width: 100%; }
 
+    /* Right Action Group */
+    .nav-actions {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      flex-shrink: 0;
+      white-space: nowrap;
+    }
     .nav-phone {
       display: inline-flex;
       align-items: center;
-      gap: 7px;
+      gap: 8px;
       color: var(--green);
-      font-weight: 750;
-      font-size: 0.92rem;
-      padding: 8px 14px;
+      font-weight: 700;
+      font-size: 0.9rem;
+      padding: 10px 16px;
       border-radius: 100px;
       background: var(--green-soft);
-      border: 1px solid rgba(26, 86, 76, 0.15);
+      border: 1px solid rgba(21, 70, 62, 0.15);
+      white-space: nowrap;
+      flex-shrink: 0;
       transition: all 0.2s ease;
     }
     .nav-phone:hover {
@@ -310,13 +333,13 @@
       border-color: var(--green);
       transform: translateY(-1px);
     }
-    .nav-phone svg { width: 15px; height: 15px; fill: currentColor; }
+    .nav-phone svg { width: 15px; height: 15px; fill: currentColor; flex-shrink: 0; }
 
     .menu-toggle {
-      display: none; margin-left: auto;
+      display: none;
       width: 44px; height: 44px;
       border: 1px solid var(--line);
-      border-radius: 12px;
+      border-radius: 11px;
       background: white;
       color: var(--ink);
       box-shadow: var(--shadow-sm);
@@ -328,14 +351,17 @@
 
     /* Buttons */
     .btn {
-      display: inline-flex; align-items: center; justify-content: center; gap: 9px;
-      min-height: 50px; padding: 0 22px;
+      display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+      min-height: 48px; padding: 0 22px;
       border: 1px solid transparent;
-      border-radius: 12px;
-      font-weight: 750;
-      font-size: 0.95rem;
+      border-radius: 11px;
+      font-family: var(--font-body);
+      font-weight: 700;
+      font-size: 0.94rem;
       line-height: 1;
       letter-spacing: -0.01em;
+      white-space: nowrap;
+      flex-shrink: 0;
       transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
       position: relative;
       overflow: hidden;
@@ -344,27 +370,27 @@
     .btn:active { transform: translateY(0); }
     
     .btn-primary {
-      background: linear-gradient(135deg, #1f6259 0%, #133e37 100%);
+      background: linear-gradient(135deg, #1a4f46 0%, #0e302a 100%);
       color: white;
-      box-shadow: 0 8px 24px rgba(26, 86, 76, 0.22);
+      box-shadow: 0 8px 20px rgba(14, 48, 42, 0.22);
       border: 1px solid rgba(197, 160, 89, 0.25);
     }
     .btn-primary:hover {
-      background: linear-gradient(135deg, #267a6c 0%, #174a42 100%);
-      box-shadow: 0 12px 30px rgba(26, 86, 76, 0.32);
-      border-color: rgba(197, 160, 89, 0.5);
+      background: linear-gradient(135deg, #226459 0%, #123d35 100%);
+      box-shadow: 0 12px 28px rgba(14, 48, 42, 0.3);
+      border-color: rgba(197, 160, 89, 0.45);
     }
 
     .btn-gold {
       background: linear-gradient(135deg, #d4af37 0%, #ad822c 100%);
-      color: #0d2823;
+      color: #071614;
       font-weight: 800;
       box-shadow: var(--shadow-gold);
       border: 1px solid rgba(255, 255, 255, 0.3);
     }
     .btn-gold:hover {
-      background: linear-gradient(135deg, #e5c358 0%, #be9235 100%);
-      box-shadow: 0 14px 36px rgba(197, 160, 89, 0.35);
+      background: linear-gradient(135deg, #e2be4c 0%, #be9235 100%);
+      box-shadow: 0 14px 34px rgba(197, 160, 89, 0.35);
     }
 
     .btn-secondary {
@@ -378,21 +404,9 @@
       background: #fafcfb;
       box-shadow: var(--shadow-md);
     }
-    
-    .btn-light {
-      background: rgba(255, 255, 255, 0.12);
-      border: 1px solid rgba(255, 255, 255, 0.28);
-      color: white;
-      backdrop-filter: blur(8px);
-    }
-    .btn-light:hover {
-      background: white;
-      color: var(--green-dark);
-      border-color: white;
-    }
 
     /* =========================================================================
-       HERO SECTION (PRESERVED EXACTLY AS SPECIFIED)
+       HERO SECTION (KEPT 100% UNTOUCHED AS REQUESTED)
        ========================================================================= */
     .hero {
       position: relative;
@@ -467,7 +481,7 @@
       position: relative;
       background: var(--white);
       border-bottom: 1px solid var(--line);
-      box-shadow: 0 10px 30px rgba(11, 28, 25, 0.03);
+      box-shadow: 0 10px 30px rgba(11, 32, 28, 0.03);
       z-index: 10;
     }
     .trust-grid {
@@ -477,8 +491,8 @@
     .trust-item {
       display: flex;
       align-items: center;
-      gap: 18px;
-      padding: 30px 24px;
+      gap: 16px;
+      padding: 28px 22px;
       border-right: 1px solid var(--line-subtle);
       transition: all 0.25s ease;
     }
@@ -488,22 +502,24 @@
     }
     .trust-icon-box {
       display: grid; place-items: center;
-      width: 52px; height: 52px; flex: 0 0 auto;
-      border-radius: 14px;
+      width: 48px; height: 48px; flex-shrink: 0;
+      border-radius: 12px;
       background: var(--green-soft);
-      border: 1px solid rgba(26, 86, 76, 0.15);
+      border: 1px solid rgba(21, 70, 62, 0.12);
       color: var(--green);
+      transition: all 0.25s ease;
     }
     .trust-item:hover .trust-icon-box {
       background: var(--green);
       color: white;
       transform: scale(1.05);
     }
-    .trust-icon-box svg { width: 24px; height: 24px; }
+    .trust-icon-box svg { width: 22px; height: 22px; }
     .trust-info { display: flex; flex-direction: column; }
     .trust-info strong {
-      font-size: 1.12rem;
-      font-weight: 800;
+      font-family: var(--font-heading);
+      font-size: 1.1rem;
+      font-weight: 750;
       letter-spacing: -0.01em;
       color: var(--ink);
       display: flex;
@@ -512,7 +528,7 @@
     }
     .trust-info span {
       color: var(--text);
-      font-size: 0.86rem;
+      font-size: 0.85rem;
       margin-top: 2px;
     }
     .trust-rating-stars {
@@ -533,7 +549,7 @@
       position: relative;
       display: flex;
       flex-direction: column;
-      padding: 36px 32px;
+      padding: 34px 30px;
       border: 1px solid var(--line);
       border-radius: var(--radius);
       background: var(--white);
@@ -551,7 +567,7 @@
     .service-card:hover {
       transform: translateY(-6px);
       box-shadow: var(--shadow-md);
-      border-color: rgba(26, 86, 76, 0.3);
+      border-color: rgba(21, 70, 62, 0.3);
     }
     .service-card:hover::after {
       background: linear-gradient(90deg, var(--green) 0%, var(--gold) 100%);
@@ -561,14 +577,14 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      margin-bottom: 24px;
+      margin-bottom: 22px;
     }
     .service-icon-wrap {
       display: grid; place-items: center;
-      width: 54px; height: 54px;
-      border-radius: 14px;
+      width: 50px; height: 50px;
+      border-radius: 13px;
       background: var(--green-soft);
-      border: 1px solid rgba(26, 86, 76, 0.12);
+      border: 1px solid rgba(21, 70, 62, 0.12);
       color: var(--green);
       transition: all 0.3s ease;
     }
@@ -577,40 +593,39 @@
       color: white;
       transform: scale(1.08) rotate(-3deg);
     }
-    .service-icon-wrap svg { width: 26px; height: 26px; }
+    .service-icon-wrap svg { width: 24px; height: 24px; }
     
     .service-badge-tag {
       font-size: 0.72rem;
-      font-weight: 800;
-      letter-spacing: 0.08em;
+      font-weight: 750;
+      letter-spacing: 0.06em;
       text-transform: uppercase;
       padding: 4px 10px;
       border-radius: 100px;
       background: var(--surface);
-      color: var(--text-light);
+      color: var(--text-muted);
       border: 1px solid var(--line);
     }
 
     .service-card h3 {
-      font-size: 1.35rem;
-      margin-bottom: 12px;
-      font-weight: 750;
+      font-size: 1.3rem;
+      margin-bottom: 10px;
     }
     .service-card p {
-      font-size: 0.94rem;
+      font-size: 0.93rem;
       line-height: 1.65;
-      margin-bottom: 24px;
+      margin-bottom: 22px;
       flex-grow: 1;
     }
 
     .service-features-list {
       list-style: none;
       padding: 0;
-      margin: 0 0 28px 0;
+      margin: 0 0 24px 0;
       display: grid;
       gap: 10px;
       border-top: 1px solid var(--line-subtle);
-      padding-top: 20px;
+      padding-top: 18px;
     }
     .service-features-list li {
       display: flex;
@@ -623,7 +638,7 @@
     .service-features-list li svg {
       width: 16px; height: 16px;
       color: var(--gold-dark);
-      flex: 0 0 auto;
+      flex-shrink: 0;
       margin-top: 3px;
     }
 
@@ -652,10 +667,10 @@
 
     /* Featured Signature Card */
     .service-card.featured {
-      background: linear-gradient(165deg, #113630 0%, #081f1b 100%);
+      background: linear-gradient(165deg, #10332d 0%, #071916 100%);
       border-color: rgba(197, 160, 89, 0.4);
       color: white;
-      box-shadow: 0 16px 48px rgba(11, 28, 25, 0.18);
+      box-shadow: 0 16px 48px rgba(11, 32, 28, 0.18);
     }
     .service-card.featured::before {
       content: "";
@@ -674,9 +689,9 @@
       color: var(--ink);
     }
     .service-card.featured .service-badge-tag {
-      background: rgba(197, 160, 89, 0.25);
-      border-color: rgba(197, 160, 89, 0.5);
-      color: #ffe6a8;
+      background: rgba(197, 160, 89, 0.22);
+      border-color: rgba(197, 160, 89, 0.45);
+      color: #ffe4a0;
       font-weight: 800;
     }
     .service-card.featured h3 { color: white; }
@@ -696,14 +711,14 @@
     .about-split {
       display: grid;
       grid-template-columns: 1fr 1.15fr;
-      gap: 72px;
+      gap: 68px;
       align-items: center;
     }
     .about-visual {
       position: relative;
     }
     .about-photo-wrapper {
-      position: relative;
+      position: border-box;
       border-radius: var(--radius-lg);
       overflow: hidden;
       box-shadow: var(--shadow-lg);
@@ -724,51 +739,52 @@
     /* Floating Accolade Card */
     .floating-accolade {
       position: absolute;
-      bottom: -28px;
-      right: -24px;
-      background: rgba(255, 255, 255, 0.95);
+      bottom: -24px;
+      right: -20px;
+      background: rgba(255, 255, 255, 0.96);
       backdrop-filter: blur(16px);
       -webkit-backdrop-filter: blur(16px);
       border: 1.5px solid rgba(197, 160, 89, 0.4);
-      padding: 20px 24px;
+      padding: 18px 22px;
       border-radius: var(--radius);
-      box-shadow: 0 18px 45px rgba(11, 28, 25, 0.14);
+      box-shadow: 0 16px 40px rgba(11, 32, 28, 0.12);
       display: flex;
       align-items: center;
-      gap: 16px;
-      max-width: 320px;
+      gap: 14px;
+      max-width: 300px;
     }
     .accolade-icon {
       display: grid; place-items: center;
-      width: 48px; height: 48px; flex: 0 0 auto;
-      border-radius: 12px;
-      background: linear-gradient(135deg, #1f6259 0%, #0d2823 100%);
+      width: 44px; height: 44px; flex-shrink: 0;
+      border-radius: 11px;
+      background: linear-gradient(135deg, #184c43 0%, #0b201c 100%);
       color: #ffd88a;
     }
-    .accolade-icon svg { width: 24px; height: 24px; }
+    .accolade-icon svg { width: 22px; height: 22px; }
     .accolade-text strong {
       display: block;
-      font-size: 0.98rem;
+      font-family: var(--font-heading);
+      font-size: 0.95rem;
       font-weight: 800;
       color: var(--ink);
     }
     .accolade-text span {
       display: block;
-      font-size: 0.8rem;
+      font-size: 0.78rem;
       color: var(--text);
       margin-top: 2px;
     }
 
     .about-pillars {
       display: grid;
-      gap: 18px;
-      margin-top: 36px;
+      gap: 16px;
+      margin-top: 32px;
     }
     .pillar-card {
       display: flex;
       align-items: flex-start;
-      gap: 20px;
-      padding: 22px 24px;
+      gap: 18px;
+      padding: 20px 22px;
       background: var(--white);
       border: 1px solid var(--line);
       border-radius: var(--radius);
@@ -776,28 +792,29 @@
       transition: all 0.25s ease;
     }
     .pillar-card:hover {
-      border-color: rgba(26, 86, 76, 0.25);
+      border-color: rgba(21, 70, 62, 0.25);
       transform: translateX(4px);
       box-shadow: var(--shadow-md);
     }
     .pillar-icon-box {
       display: grid; place-items: center;
-      width: 46px; height: 46px; flex: 0 0 auto;
-      border-radius: 12px;
+      width: 44px; height: 44px; flex-shrink: 0;
+      border-radius: 11px;
       background: var(--green-soft);
       color: var(--green);
-      border: 1px solid rgba(26, 86, 76, 0.12);
+      border: 1px solid rgba(21, 70, 62, 0.12);
     }
-    .pillar-icon-box svg { width: 22px; height: 22px; }
+    .pillar-icon-box svg { width: 20px; height: 20px; }
     .pillar-info h4 {
-      font-size: 1.06rem;
+      font-family: var(--font-heading);
+      font-size: 1.05rem;
       font-weight: 750;
-      margin-bottom: 5px;
+      margin-bottom: 4px;
       color: var(--ink);
     }
     .pillar-info p {
       margin: 0;
-      font-size: 0.92rem;
+      font-size: 0.91rem;
       color: var(--text);
       line-height: 1.55;
     }
@@ -808,15 +825,14 @@
     .process-timeline {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 28px;
-      position: relative;
+      gap: 24px;
     }
     .process-step-card {
       position: relative;
       background: rgba(255, 255, 255, 0.04);
       border: 1px solid rgba(255, 255, 255, 0.12);
       border-radius: var(--radius-lg);
-      padding: 44px 34px 38px;
+      padding: 38px 30px;
       backdrop-filter: blur(10px);
       transition: all 0.3s ease;
     }
@@ -826,29 +842,29 @@
       transform: translateY(-6px);
     }
     .step-number-tag {
-      font-family: var(--font-serif);
-      font-size: 2.8rem;
-      font-weight: 700;
+      font-family: var(--font-heading);
+      font-size: 2.4rem;
+      font-weight: 800;
       color: #ffd88a;
       line-height: 1;
-      margin-bottom: 20px;
+      margin-bottom: 16px;
       display: flex;
       align-items: center;
       justify-content: space-between;
     }
     .step-icon-subtle {
-      width: 32px; height: 32px;
+      width: 28px; height: 28px;
       opacity: 0.6;
       color: white;
     }
     .process-step-card h3 {
-      font-size: 1.35rem;
+      font-size: 1.3rem;
       color: white;
-      margin-bottom: 14px;
+      margin-bottom: 12px;
     }
     .process-step-card p {
       color: rgba(255, 255, 255, 0.78);
-      font-size: 0.95rem;
+      font-size: 0.94rem;
       line-height: 1.65;
       margin: 0;
     }
@@ -860,24 +876,24 @@
       display: flex;
       align-items: flex-end;
       justify-content: space-between;
-      margin-bottom: 48px;
+      margin-bottom: 44px;
       flex-wrap: wrap;
-      gap: 24px;
+      gap: 20px;
     }
     .rating-badge-card {
       display: flex;
       align-items: center;
-      gap: 20px;
+      gap: 16px;
       background: var(--white);
       border: 1px solid var(--line);
-      padding: 16px 26px;
+      padding: 14px 22px;
       border-radius: 100px;
       box-shadow: var(--shadow-sm);
     }
     .rating-big-num {
-      font-family: var(--font-serif);
-      font-size: 2.2rem;
-      font-weight: 700;
+      font-family: var(--font-heading);
+      font-size: 2rem;
+      font-weight: 800;
       color: var(--ink);
       line-height: 1;
     }
@@ -887,13 +903,13 @@
     }
     .rating-stars-gold {
       color: #e5a93c;
-      font-size: 1.05rem;
+      font-size: 1rem;
       letter-spacing: 2px;
     }
     .rating-verified-text {
-      font-size: 0.8rem;
+      font-size: 0.78rem;
       font-weight: 700;
-      color: var(--text-light);
+      color: var(--text-muted);
       text-transform: uppercase;
       letter-spacing: 0.05em;
     }
@@ -901,11 +917,11 @@
     .reviews-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 26px;
+      gap: 24px;
     }
     .review-card {
       position: relative;
-      padding: 38px 32px;
+      padding: 34px 28px;
       border: 1px solid var(--line);
       border-radius: var(--radius-lg);
       background: var(--white);
@@ -921,41 +937,42 @@
       border-color: rgba(197, 160, 89, 0.35);
     }
     .quote-icon-mark {
-      font-family: var(--font-serif);
-      font-size: 3.5rem;
-      color: rgba(197, 160, 89, 0.3);
+      font-family: var(--font-heading);
+      font-size: 2.8rem;
+      color: rgba(197, 160, 89, 0.35);
       line-height: 0.8;
-      margin-bottom: 12px;
+      margin-bottom: 10px;
     }
     .review-card blockquote {
-      margin: 0 0 26px 0;
-      color: #223a35;
-      font-size: 1.02rem;
+      margin: 0 0 22px 0;
+      color: #243a35;
+      font-size: 0.98rem;
       line-height: 1.7;
-      font-style: italic;
       flex-grow: 1;
     }
     .review-footer {
       display: flex;
       align-items: center;
-      gap: 14px;
+      gap: 12px;
       border-top: 1px solid var(--line-subtle);
-      padding-top: 20px;
+      padding-top: 18px;
     }
     .reviewer-avatar-initials {
       display: grid; place-items: center;
-      width: 44px; height: 44px; flex: 0 0 auto;
+      width: 42px; height: 42px; flex-shrink: 0;
       border-radius: 50%;
       background: var(--green-soft);
       color: var(--green);
+      font-family: var(--font-heading);
       font-weight: 800;
-      font-size: 0.95rem;
-      border: 1px solid rgba(26, 86, 76, 0.15);
+      font-size: 0.92rem;
+      border: 1px solid rgba(21, 70, 62, 0.15);
     }
     .reviewer-details strong {
       display: block;
-      font-size: 0.98rem;
-      font-weight: 800;
+      font-family: var(--font-heading);
+      font-size: 0.96rem;
+      font-weight: 750;
       color: var(--ink);
     }
     .reviewer-details span {
@@ -963,7 +980,7 @@
       align-items: center;
       gap: 5px;
       font-size: 0.78rem;
-      color: var(--text-light);
+      color: var(--text-muted);
       margin-top: 2px;
     }
     .verified-check-pill {
@@ -977,43 +994,39 @@
     .area-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 60px;
+      gap: 56px;
       align-items: center;
-    }
-    .area-copy {
-      display: flex;
-      flex-direction: column;
     }
     .neighborhood-pills-wrap {
       display: flex;
       flex-wrap: wrap;
       gap: 8px;
-      margin: 20px 0 28px;
+      margin: 18px 0 24px;
     }
     .area-pill {
       display: inline-flex;
       align-items: center;
       gap: 6px;
-      padding: 6px 14px;
+      padding: 6px 13px;
       background: var(--white);
       border: 1px solid var(--line);
       border-radius: 100px;
-      font-size: 0.84rem;
+      font-size: 0.82rem;
       font-weight: 650;
       color: #2c4742;
     }
-    .area-pill svg { width: 14px; height: 14px; color: var(--gold-dark); }
+    .area-pill svg { width: 12px; height: 12px; color: var(--gold-dark); }
 
     .business-details-grid {
       display: grid;
-      gap: 14px;
-      margin-bottom: 32px;
+      gap: 12px;
+      margin-bottom: 28px;
     }
     .detail-card {
       display: flex;
       align-items: center;
-      gap: 16px;
-      padding: 16px 20px;
+      gap: 15px;
+      padding: 15px 18px;
       background: var(--white);
       border: 1px solid var(--line);
       border-radius: var(--radius);
@@ -1021,23 +1034,23 @@
     }
     .detail-icon-circle {
       display: grid; place-items: center;
-      width: 42px; height: 42px; flex: 0 0 auto;
+      width: 40px; height: 40px; flex-shrink: 0;
       border-radius: 10px;
       background: var(--green-soft);
       color: var(--green);
     }
-    .detail-icon-circle svg { width: 20px; height: 20px; }
+    .detail-icon-circle svg { width: 18px; height: 18px; }
     .detail-text small {
       display: block;
-      font-size: 0.76rem;
+      font-size: 0.74rem;
       text-transform: uppercase;
       letter-spacing: 0.06em;
-      color: var(--text-light);
+      color: var(--text-muted);
       font-weight: 700;
     }
     .detail-text strong {
       display: block;
-      font-size: 0.98rem;
+      font-size: 0.96rem;
       color: var(--ink);
       margin-top: 2px;
     }
@@ -1049,34 +1062,34 @@
       border: 1px solid var(--line);
       box-shadow: var(--shadow-md);
       background: var(--surface);
-      min-height: 460px;
+      min-height: 440px;
       height: 100%;
     }
     .map-frame-box iframe {
       width: 100%;
       height: 100%;
-      min-height: 460px;
+      min-height: 440px;
       border: 0;
     }
     .map-floating-badge {
       position: absolute;
-      top: 20px;
-      left: 20px;
-      background: rgba(13, 40, 35, 0.9);
+      top: 18px;
+      left: 18px;
+      background: rgba(11, 32, 28, 0.92);
       backdrop-filter: blur(10px);
       -webkit-backdrop-filter: blur(10px);
       color: white;
-      padding: 10px 18px;
+      padding: 8px 16px;
       border-radius: 100px;
-      font-size: 0.84rem;
+      font-size: 0.82rem;
       font-weight: 700;
       display: flex;
       align-items: center;
-      gap: 8px;
+      gap: 7px;
       border: 1px solid rgba(197, 160, 89, 0.35);
-      box-shadow: 0 10px 24px rgba(0, 0, 0, 0.2);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
     }
-    .map-floating-badge svg { width: 16px; height: 16px; color: #ffd88a; }
+    .map-floating-badge svg { width: 15px; height: 15px; color: #ffd88a; }
 
     /* =========================================================================
        LUXURY FAQ SECTION
@@ -1084,30 +1097,31 @@
     .faq-split {
       display: grid;
       grid-template-columns: 0.85fr 1.15fr;
-      gap: 68px;
+      gap: 60px;
       align-items: start;
     }
     .faq-concierge-card {
       background: var(--white);
       border: 1px solid var(--line);
       border-radius: var(--radius-lg);
-      padding: 36px 32px;
+      padding: 32px 28px;
       box-shadow: var(--shadow-sm);
-      margin-top: 28px;
+      margin-top: 24px;
       border-top: 3px solid var(--gold);
     }
     .faq-concierge-card h4 {
+      font-family: var(--font-heading);
       font-size: 1.15rem;
       margin-bottom: 8px;
     }
     .faq-concierge-card p {
       font-size: 0.92rem;
-      margin-bottom: 22px;
+      margin-bottom: 20px;
     }
 
     .faq-accordion {
       display: grid;
-      gap: 14px;
+      gap: 12px;
     }
     .faq-item {
       border: 1px solid var(--line);
@@ -1125,17 +1139,18 @@
     }
     .faq-question {
       width: 100%;
-      padding: 24px 28px;
+      padding: 22px 26px;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      gap: 18px;
+      gap: 16px;
       border: 0;
       background: transparent;
       color: var(--ink);
       text-align: left;
-      font-size: 1.05rem;
-      font-weight: 750;
+      font-family: var(--font-heading);
+      font-size: 1.04rem;
+      font-weight: 700;
       letter-spacing: -0.01em;
       transition: color 0.2s ease;
     }
@@ -1144,11 +1159,11 @@
     }
     .faq-toggle-icon {
       display: grid; place-items: center;
-      width: 32px; height: 32px; flex: 0 0 auto;
+      width: 30px; height: 30px; flex-shrink: 0;
       border-radius: 50%;
       background: var(--surface);
       color: var(--green);
-      font-size: 1.25rem;
+      font-size: 1.2rem;
       font-weight: 600;
       transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
     }
@@ -1159,9 +1174,9 @@
     }
     .faq-answer {
       display: none;
-      padding: 0 28px 26px;
+      padding: 0 26px 24px;
       color: var(--text);
-      font-size: 0.96rem;
+      font-size: 0.95rem;
       line-height: 1.7;
     }
     .faq-answer p { margin: 0; }
@@ -1173,35 +1188,31 @@
     .quote-split {
       display: grid;
       grid-template-columns: 0.85fr 1.15fr;
-      gap: 60px;
+      gap: 56px;
       align-items: start;
-    }
-    .quote-info-panel {
-      display: flex;
-      flex-direction: column;
     }
     .quote-guarantee-list {
       display: grid;
-      gap: 16px;
-      margin: 32px 0;
+      gap: 14px;
+      margin: 28px 0;
     }
     .quote-guarantee-item {
       display: flex;
       align-items: flex-start;
-      gap: 14px;
+      gap: 12px;
     }
     .guarantee-bullet {
       display: grid; place-items: center;
-      width: 28px; height: 28px; flex: 0 0 auto;
+      width: 24px; height: 24px; flex-shrink: 0;
       border-radius: 50%;
-      background: rgba(197, 160, 89, 0.2);
+      background: rgba(197, 160, 89, 0.18);
       color: var(--gold-dark);
-      font-size: 0.85rem;
+      font-size: 0.8rem;
       font-weight: 800;
     }
     .quote-guarantee-item p {
       margin: 0;
-      font-size: 0.94rem;
+      font-size: 0.93rem;
       color: #2b4540;
     }
     .quote-guarantee-item strong {
@@ -1209,23 +1220,23 @@
     }
 
     .direct-concierge-box {
-      padding: 24px;
+      padding: 22px;
       background: var(--surface);
       border: 1px solid var(--line);
       border-radius: var(--radius);
     }
-    .direct-concierge-box strong { display: block; font-size: 0.96rem; margin-bottom: 8px; }
+    .direct-concierge-box strong { display: block; font-size: 0.94rem; margin-bottom: 6px; }
     .direct-concierge-box a {
       display: inline-flex;
       align-items: center;
       gap: 8px;
       color: var(--green);
       font-weight: 750;
-      font-size: 1.05rem;
+      font-size: 1.02rem;
     }
 
     .quote-form-card {
-      padding: 40px;
+      padding: 36px;
       border: 1px solid var(--line);
       border-radius: var(--radius-lg);
       background: var(--white);
@@ -1235,7 +1246,7 @@
     .quote-form-card::before {
       content: "";
       position: absolute;
-      top: 0; left: 40px; right: 40px; height: 4px;
+      top: 0; left: 36px; right: 36px; height: 4px;
       background: linear-gradient(90deg, var(--green) 0%, var(--gold) 100%);
       border-radius: 0 0 4px 4px;
     }
@@ -1243,47 +1254,47 @@
     .form-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 20px;
+      gap: 18px;
     }
-    .field { display: grid; gap: 8px; }
+    .field { display: grid; gap: 7px; }
     .field.full { grid-column: 1 / -1; }
     label {
-      font-size: 0.86rem;
+      font-size: 0.85rem;
       font-weight: 750;
       color: var(--ink);
       display: flex;
       align-items: center;
       justify-content: space-between;
     }
-    label span { color: var(--text-light); font-weight: 500; font-size: 0.78rem; }
+    label span { color: var(--text-muted); font-weight: 500; font-size: 0.76rem; }
     
     input, select, textarea {
-      width: 100%; min-height: 50px;
-      padding: 13px 16px;
+      width: 100%; min-height: 48px;
+      padding: 12px 15px;
       border: 1.5px solid #d3deda;
-      border-radius: 11px;
+      border-radius: 10px;
       background: #fafcfb;
       color: var(--ink);
       outline: none;
       transition: all 0.2s ease;
-      font-size: 0.95rem;
+      font-size: 0.94rem;
     }
-    textarea { min-height: 120px; resize: vertical; }
+    textarea { min-height: 110px; resize: vertical; }
     input:focus, select:focus, textarea:focus {
       border-color: var(--green);
       background: white;
-      box-shadow: 0 0 0 4px rgba(26, 86, 76, 0.12);
+      box-shadow: 0 0 0 4px rgba(21, 70, 62, 0.12);
     }
     input::placeholder, textarea::placeholder {
       color: #9cb0aa;
     }
 
-    /* Add-on Chips in Form */
+    /* Add-on Chips */
     .addons-title {
-      font-size: 0.86rem;
+      font-size: 0.85rem;
       font-weight: 750;
       color: var(--ink);
-      margin-bottom: 10px;
+      margin-bottom: 8px;
     }
     .addons-grid {
       display: flex;
@@ -1293,8 +1304,8 @@
     .addon-chip {
       display: inline-flex;
       align-items: center;
-      gap: 7px;
-      padding: 8px 14px;
+      gap: 6px;
+      padding: 7px 13px;
       background: var(--surface);
       border: 1.5px solid var(--line);
       border-radius: 100px;
@@ -1322,36 +1333,36 @@
     .form-footer {
       display: flex;
       align-items: center;
-      gap: 18px;
-      margin-top: 28px;
-      padding-top: 24px;
+      gap: 16px;
+      margin-top: 24px;
+      padding-top: 20px;
       border-top: 1px solid var(--line-subtle);
     }
     .form-note {
       margin: 0;
-      font-size: 0.82rem;
-      color: var(--text-light);
+      font-size: 0.8rem;
+      color: var(--text-muted);
       line-height: 1.5;
     }
     .success {
       display: none;
-      padding: 16px 20px;
-      margin-top: 20px;
+      padding: 15px 18px;
+      margin-top: 18px;
       background: var(--green-soft);
-      border: 1px solid rgba(26, 86, 76, 0.2);
+      border: 1px solid rgba(21, 70, 62, 0.2);
       border-radius: 10px;
       color: var(--green-dark);
       font-weight: 700;
-      font-size: 0.92rem;
+      font-size: 0.9rem;
     }
 
     /* =========================================================================
        LUXURY FOOTER
        ========================================================================= */
     footer {
-      background: var(--green-deep);
+      background: var(--green-dark);
       color: white;
-      padding: 80px 0 36px;
+      padding: 74px 0 34px;
       border-top: 1px solid rgba(197, 160, 89, 0.2);
       position: relative;
     }
@@ -1361,63 +1372,64 @@
     .footer-grid {
       display: grid;
       grid-template-columns: 1.4fr 0.8fr 0.8fr 1fr;
-      gap: 48px;
+      gap: 44px;
     }
     .footer-brand {
       display: flex;
       flex-direction: column;
-      gap: 16px;
+      gap: 14px;
     }
     .footer-brand .brand-mark {
       background: rgba(255, 255, 255, 0.08);
-      border-color: rgba(197, 160, 89, 0.5);
+      border-color: rgba(197, 160, 89, 0.45);
     }
     .footer-brand .brand-name { color: white; }
     .footer-brand .brand-sub { color: rgba(255, 255, 255, 0.6); }
     .footer-desc {
-      font-size: 0.92rem;
+      font-size: 0.91rem;
       line-height: 1.7;
       max-width: 340px;
     }
 
     .footer-title {
       color: white;
-      font-size: 0.95rem;
-      font-weight: 800;
-      letter-spacing: 0.06em;
+      font-family: var(--font-heading);
+      font-size: 0.94rem;
+      font-weight: 750;
+      letter-spacing: 0.05em;
       text-transform: uppercase;
-      margin-bottom: 18px;
+      margin-bottom: 16px;
       display: flex;
       align-items: center;
-      gap: 8px;
+      gap: 7px;
     }
     .footer-title::before {
       content: "";
-      width: 6px; height: 6px;
+      width: 5px; height: 5px;
       background: var(--gold);
       border-radius: 50%;
     }
     .footer-links {
       display: grid;
-      gap: 12px;
-      font-size: 0.92rem;
+      gap: 11px;
+      font-size: 0.91rem;
     }
 
     .footer-bottom {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      gap: 24px;
-      padding-top: 36px;
-      margin-top: 54px;
+      gap: 20px;
+      padding-top: 32px;
+      margin-top: 48px;
       border-top: 1px solid rgba(255, 255, 255, 0.1);
-      font-size: 0.84rem;
+      font-size: 0.83rem;
     }
     .footer-bottom p { margin: 0; }
     .back-to-top-btn {
       display: inline-flex;
       align-items: center;
-      gap: 6px;
+      gap: 5px;
       color: rgba(255, 255, 255, 0.8);
       font-weight: 700;
       transition: all 0.2s ease;
@@ -1427,9 +1439,15 @@
     .mobile-call-bar { display: none; }
 
     /* =========================================================================
-       RESPONSIVE DESIGN (TABLET & MOBILE)
+       RESPONSIVE DESIGN (ZERO WRAP BREAKPOINTS)
        ========================================================================= */
-    @media (max-width: 1024px) {
+    @media (max-width: 1160px) {
+      .nav-links { gap: 16px; font-size: 0.88rem; }
+      .nav-phone { padding: 8px 12px; font-size: 0.85rem; }
+    }
+
+    @media (max-width: 1040px) {
+      .nav-phone { display: none; }
       .services-grid, .reviews-grid { grid-template-columns: 1fr 1fr; }
       .process-timeline { grid-template-columns: 1fr; }
       .footer-grid { grid-template-columns: 1fr 1fr; }
@@ -1440,7 +1458,7 @@
         display: none;
         position: absolute;
         top: 82px; left: 0; right: 0;
-        padding: 26px 24px;
+        padding: 24px;
         border-bottom: 1px solid var(--line);
         background: white;
         flex-direction: column;
@@ -1451,24 +1469,24 @@
       .nav-links.open { display: flex; }
       .nav-links .btn { width: 100%; }
       .menu-toggle { display: block; }
-      .nav-phone { display: none; }
+      .nav-actions { display: none; }
       
-      .about-split, .area-grid, .faq-split, .quote-split { grid-template-columns: 1fr; gap: 48px; }
+      .about-split, .area-grid, .faq-split, .quote-split { grid-template-columns: 1fr; gap: 44px; }
       .trust-grid { grid-template-columns: 1fr 1fr; }
       .trust-item:nth-child(2) { border-right: 0; }
       .trust-item:nth-child(-n+2) { border-bottom: 1px solid var(--line-subtle); }
-      .floating-accolade { position: static; margin-top: 18px; max-width: 100%; }
+      .floating-accolade { position: static; margin-top: 16px; max-width: 100%; }
     }
 
     @media (max-width: 640px) {
       body { padding-bottom: 74px; }
       .container { width: min(calc(100% - 32px), var(--max)); }
-      .section { padding: 76px 0; }
-      .announcement { font-size: 0.78rem; }
+      .section { padding: 72px 0; }
+      .announcement { font-size: 0.76rem; }
       .announcement-badge { display: none; }
       .brand-sub { display: none; }
       
-      h2 { font-size: clamp(2rem, 8.5vw, 2.6rem); }
+      h2 { font-size: clamp(1.9rem, 8vw, 2.5rem); }
       
       /* Preserved Mobile Hero overrides */
       .hero {
@@ -1484,31 +1502,31 @@
       .hero-note { gap: 8px 14px; font-size: .84rem; }
       
       .trust-grid, .services-grid, .reviews-grid, .form-grid, .footer-grid { grid-template-columns: 1fr; }
-      .trust-item { border-right: 0; border-bottom: 1px solid var(--line-subtle); padding: 20px 0; }
+      .trust-item { border-right: 0; border-bottom: 1px solid var(--line-subtle); padding: 18px 0; }
       .trust-item:last-child { border-bottom: 0; }
       
-      .quote-form-card { padding: 24px 20px; }
+      .quote-form-card { padding: 22px 18px; }
       .form-footer { flex-direction: column; align-items: stretch; }
       .form-footer .btn { width: 100%; }
-      .footer-bottom { flex-direction: column; text-align: center; gap: 16px; }
+      .footer-bottom { flex-direction: column; text-align: center; gap: 14px; }
       
       /* Floating Mobile Concierge Bar */
       .mobile-call-bar {
         display: flex;
-        position: fixed; z-index: 1100; left: 14px; right: 14px; bottom: 12px;
+        position: fixed; z-index: 1100; left: 12px; right: 12px; bottom: 12px;
         gap: 10px;
       }
       .mobile-call-btn {
         flex: 1;
-        min-height: 50px;
+        min-height: 48px;
         display: flex;
         align-items: center;
         justify-content: center;
         gap: 8px;
-        border-radius: 12px;
+        border-radius: 11px;
         font-weight: 800;
-        font-size: 0.9rem;
-        box-shadow: 0 10px 25px rgba(7, 25, 22, 0.35);
+        font-size: 0.88rem;
+        box-shadow: 0 10px 25px rgba(7, 22, 20, 0.35);
       }
       .mobile-call-btn.primary {
         background: var(--green);
@@ -1517,7 +1535,7 @@
       }
       .mobile-call-btn.gold {
         background: linear-gradient(135deg, #d4af37 0%, #ad822c 100%);
-        color: #0b1c19;
+        color: #071614;
       }
     }
 
@@ -1533,7 +1551,7 @@
   <div class="announcement">
     <div class="container">
       <span class="announcement-badge">San Angelo, TX</span>
-      <span>✦ White-Glove Residential Cleaning · Serving San Angelo & Surrounding Estates · Mon–Fri 8 AM–7 PM</span>
+      <span>White-Glove Residential Cleaning · Serving San Angelo & Surrounding Estates · Mon–Fri 8 AM–7 PM</span>
     </div>
   </div>
 
@@ -1546,7 +1564,7 @@
           <span class="brand-name">Sugar In The Morning</span>
           <span class="brand-sub">
             <span>Cleaning Service</span>
-            <span class="brand-sub-dot">✦</span>
+            <span class="brand-sub-dot">·</span>
             <span>San Angelo, TX</span>
           </span>
         </span>
@@ -1554,18 +1572,20 @@
 
       <nav class="nav-links" id="navLinks" aria-label="Primary navigation">
         <a href="#services">Services</a>
-        <a href="#about">The Standard</a>
-        <a href="#process">Experience</a>
+        <a href="#about">Why Us</a>
+        <a href="#process">Process</a>
         <a href="#reviews">Reviews</a>
         <a href="#area">Service Area</a>
         <a href="#faq">FAQ</a>
-        <a class="btn btn-primary" href="#quote">Request a Quote</a>
       </nav>
 
-      <a class="nav-phone" href="tel:+13257165712" aria-label="Direct Phone Line">
-        <svg viewBox="0 0 24 24"><path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
-        <span>(325) 716-5712</span>
-      </a>
+      <div class="nav-actions">
+        <a class="nav-phone" href="tel:+13257165712" aria-label="Call (325) 716-5712">
+          <svg viewBox="0 0 24 24"><path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+          <span>(325) 716-5712</span>
+        </a>
+        <a class="btn btn-primary" href="#quote">Request a Quote</a>
+      </div>
 
       <button class="menu-toggle" id="menuToggle" aria-label="Open menu" aria-expanded="false"><span></span></button>
     </div>
@@ -1573,7 +1593,7 @@
 
   <main id="main">
     <!-- =======================================================================
-         HERO SECTION (KEPT INTACT AS REQUESTED)
+         HERO SECTION (KEPT 100% UNTOUCHED AS REQUESTED)
          ======================================================================= -->
     <section class="hero" id="top">
       <div class="container hero-grid">
@@ -1597,7 +1617,7 @@
     </section>
 
     <!-- =======================================================================
-         LUXURY TRUST & SOCIAL PROOF METRICS BAR
+         LUXURY TRUST & PROOF METRICS BAR
          ======================================================================= -->
     <section class="trustbar" aria-label="Business accreditation and metrics">
       <div class="container trust-grid">
@@ -1617,7 +1637,7 @@
           </div>
           <div class="trust-info">
             <strong>White-Glove Standard</strong>
-            <span>Vetted & Detailed Housekeeping</span>
+            <span>Vetted & Detailed Care</span>
           </div>
         </div>
 
@@ -1649,9 +1669,9 @@
     <section class="section section-soft" id="services">
       <div class="container">
         <div class="section-head center">
-          <p class="kicker">Bespoke Housekeeping</p>
+          <p class="kicker"><span class="kicker-dot"></span> Tailored Housekeeping</p>
           <h2>The Right Clean For The Way You Live.</h2>
-          <p class="lead">From precision routine visits to transformative deep restorations, experience tailored cleaning services designed for discerning San Angelo homeowners.</p>
+          <p class="lead">From routine concierge visits to transformative deep resets, experience meticulous cleaning services designed for discerning San Angelo residences.</p>
         </div>
 
         <div class="services-grid">
@@ -1661,10 +1681,10 @@
               <div class="service-icon-wrap">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
               </div>
-              <span class="service-badge-tag">✦ Most Requested</span>
+              <span class="service-badge-tag">Most Requested</span>
             </div>
             <h3>Recurring Concierge Cleaning</h3>
-            <p>Consistent, impeccable upkeep for residences that value pristine kitchens, sanitized luxury bathrooms, polished tile, and dust-free sanctuary living.</p>
+            <p>Consistent, pristine upkeep for residences that prioritize spotless gourmet kitchens, sanitized bathrooms, polished floors, and dust-free sanctuary living.</p>
             
             <ul class="service-features-list">
               <li>
@@ -1673,11 +1693,11 @@
               </li>
               <li>
                 <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
-                <span>All-Tile & Hardwood Precision Polishing</span>
+                <span>Tile & Hardwood Precision Polishing</span>
               </li>
               <li>
                 <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
-                <span>Dedicated Cleaner Consistency & Discretion</span>
+                <span>Dedicated Cleaner Consistency & Privacy</span>
               </li>
             </ul>
 
@@ -1728,7 +1748,7 @@
               <span class="service-badge-tag">White-Glove</span>
             </div>
             <h3>Move-In / Move-Out Transition</h3>
-            <p>Comprehensive sanitization for empty estates and residences before key handovers or unpacking, leaving every cabinet, closet, and floor immaculate.</p>
+            <p>Comprehensive sanitization for empty residences and estates before key handover or unpacking, leaving every cabinet, drawer, and floor flawless.</p>
             
             <ul class="service-features-list">
               <li>
@@ -1737,11 +1757,11 @@
               </li>
               <li>
                 <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
-                <span>Full Interior Appliance Polish</span>
+                <span>Full Interior Appliance Sanitization</span>
               </li>
               <li>
                 <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
-                <span>Move-Ready Inspection Standard</span>
+                <span>Move-Ready Handover Standard</span>
               </li>
             </ul>
 
@@ -1757,10 +1777,10 @@
               <div class="service-icon-wrap">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
               </div>
-              <span class="service-badge-tag">Occasion & Event</span>
+              <span class="service-badge-tag">Hosting Ready</span>
             </div>
             <h3>One-Time Luxe Home Reset</h3>
-            <p>Ideal before hosting guests, following festive celebrations, or whenever your household calls for a full, effortless aesthetic revival.</p>
+            <p>Designed prior to hosting guests, following celebrations, or whenever your residence calls for an immediate, high-impact aesthetic revival.</p>
             
             <ul class="service-features-list">
               <li>
@@ -1769,11 +1789,11 @@
               </li>
               <li>
                 <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
-                <span>Guest Suite & Powder Room Sanitization</span>
+                <span>Guest Suite & Powder Room Refresh</span>
               </li>
               <li>
                 <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
-                <span>Rapid Turnaround Availability</span>
+                <span>Flexible Rapid Scheduling</span>
               </li>
             </ul>
 
@@ -1792,7 +1812,7 @@
               <span class="service-badge-tag">Custom Scope</span>
             </div>
             <h3>Priority-Area Focused Care</h3>
-            <p>Direct our expert team toward your home’s highest-priority zones: fine West Texas dust elimination, extensive tile expanses, or specific high-traffic suites.</p>
+            <p>Direct our expert team toward your home’s highest-priority zones: persistent West Texas dust filtration, all-tile floor polishing, or high-traffic wings.</p>
             
             <ul class="service-features-list">
               <li>
@@ -1805,7 +1825,7 @@
               </li>
               <li>
                 <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
-                <span>Flexible Customized Agendas</span>
+                <span>Client-Directed Action Checklist</span>
               </li>
             </ul>
 
@@ -1824,16 +1844,16 @@
               <span class="service-badge-tag">Elevations</span>
             </div>
             <h3>Concierge Add-On Enhancements</h3>
-            <p>Complement any scheduled visit with bespoke household services including linen care, laundry assistance, interior oven detailing, and custom requests.</p>
+            <p>Complement any scheduled visit with bespoke household services including linen care, laundry assistance, interior oven detailing, and specialty requests.</p>
             
             <ul class="service-features-list">
               <li>
                 <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
-                <span>Linen Changes & Laundry Assistance</span>
+                <span>Linen Changes & Gentle Laundry Care</span>
               </li>
               <li>
                 <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
-                <span>Oven, Fridge & Appliance Interiors</span>
+                <span>Oven & Refrigerator Interior Detailing</span>
               </li>
               <li>
                 <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
@@ -1857,7 +1877,7 @@
       <div class="container about-split">
         <div class="about-visual">
           <div class="about-photo-wrapper">
-            <img src="https://images.unsplash.com/photo-1527515637462-cff94eecc1ac?auto=format&fit=crop&w=1200&q=82" alt="Immaculate, luxury cleaning supplies and pristine home setting" width="1200" height="960" loading="lazy">
+            <img src="https://images.unsplash.com/photo-1527515637462-cff94eecc1ac?auto=format&fit=crop&w=1200&q=82" alt="Pristine cleaning equipment and luxury home setting" width="1200" height="960" loading="lazy">
           </div>
           
           <div class="floating-accolade">
@@ -1872,9 +1892,9 @@
         </div>
 
         <div>
-          <p class="kicker">The White-Glove Standard</p>
+          <p class="kicker"><span class="kicker-dot"></span> The White-Glove Standard</p>
           <h2>Detail Where It Matters. Consistency Where It Counts.</h2>
-          <p class="lead">A true luxury cleaning service elevates your lifestyle. We arrive prompt, prepared with premium equipment, and execute with disciplined attention to leave your home visibly transformed.</p>
+          <p class="lead">A true luxury cleaning service elevates your lifestyle. We arrive promptly, fully equipped with professional products, and execute with disciplined attention to leave your residence noticeably transformed.</p>
 
           <div class="about-pillars">
             <div class="pillar-card">
@@ -1917,7 +1937,7 @@
     <section class="section section-dark" id="process">
       <div class="container">
         <div class="section-head center">
-          <p class="kicker kicker-gold">Seamless Concierge Process</p>
+          <p class="kicker kicker-gold"><span class="kicker-dot" style="background:#ffd88a;"></span> Seamless Concierge Process</p>
           <h2>Effortless From Quote To Pristine Clean.</h2>
           <p class="lead">No convoluted booking matrices. Experience smooth, personalized communication from your initial message to a beautifully restored home.</p>
         </div>
@@ -1929,7 +1949,7 @@
               <svg class="step-icon-subtle" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
             </div>
             <h3>Request Your Quote</h3>
-            <p>Specify your home size, preferred service type, and unique focal points (tile, dust, pets, or laundry) in our streamlined form.</p>
+            <p>Specify your residence size, preferred service type, and unique focal points (tile, dust, pets, or laundry) in our streamlined form.</p>
           </article>
 
           <article class="process-step-card">
@@ -1960,7 +1980,7 @@
       <div class="container">
         <div class="reviews-header-block">
           <div>
-            <p class="kicker">Client Accolades</p>
+            <p class="kicker"><span class="kicker-dot"></span> Client Accolades</p>
             <h2>Trusted by San Angelo Homeowners.</h2>
             <p class="lead">Read genuine feedback from local clients who rely on Sugar In The Morning for meticulous residential care.</p>
           </div>
@@ -2022,10 +2042,10 @@
          ======================================================================= -->
     <section class="section section-white" id="area">
       <div class="container area-grid">
-        <div class="area-copy">
-          <p class="kicker">Service Radius & Location</p>
-          <h2>Proudly Serving San Angelo & Surrounding Communities.</h2>
-          <p class="lead">Headquartered at 1210 Henry Lane, we serve residences, ranches, and estates throughout San Angelo and surrounding Concho Valley properties.</p>
+        <div>
+          <p class="kicker"><span class="kicker-dot"></span> Service Radius & Location</p>
+          <h2>Dedicated to San Angelo & Surrounding Properties.</h2>
+          <p class="lead">Headquartered at 1210 Henry Lane, we serve residences, ranches, and estates throughout San Angelo and neighboring Concho Valley areas.</p>
 
           <div class="neighborhood-pills-wrap">
             <span class="area-pill"><svg viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="10"/></svg> Santa Rita</span>
@@ -2033,7 +2053,7 @@
             <span class="area-pill"><svg viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="10"/></svg> Southland</span>
             <span class="area-pill"><svg viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="10"/></svg> Lake Nasworthy</span>
             <span class="area-pill"><svg viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="10"/></svg> PaulAnn</span>
-            <span class="area-pill"><svg viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="10"/></svg> Country Properties</span>
+            <span class="area-pill"><svg viewBox="0 0 24 24" fill="currentColor"><circle cx="12" border-radius="50%" cy="12" r="10"/></svg> Country Estates</span>
           </div>
 
           <div class="business-details-grid">
@@ -2042,7 +2062,7 @@
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
               </div>
               <div class="detail-text">
-                <small>Physical Headquarters</small>
+                <small>Physical Location</small>
                 <strong>1210 Henry Ln, San Angelo, TX 76905</strong>
               </div>
             </div>
@@ -2052,7 +2072,7 @@
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
               </div>
               <div class="detail-text">
-                <small>Direct Concierge Line</small>
+                <small>Direct Phone Line</small>
                 <strong>(325) 716-5712</strong>
               </div>
             </div>
@@ -2062,7 +2082,7 @@
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
               </div>
               <div class="detail-text">
-                <small>Standard Business Hours</small>
+                <small>Operating Hours</small>
                 <strong>Monday–Friday · 8:00 AM – 7:00 PM</strong>
               </div>
             </div>
@@ -2089,11 +2109,11 @@
 
     <!-- =======================================================================
          LUXURY FAQ ACCORDION
-         ======================================================================= -->
+         ========================================================================= -->
     <section class="section section-soft" id="faq">
       <div class="container faq-split">
         <div>
-          <p class="kicker">Helpful Answers</p>
+          <p class="kicker"><span class="kicker-dot"></span> Helpful Answers</p>
           <h2>Before Your First Clean.</h2>
           <p class="lead">Essential details on our white-glove procedures, pricing transparency, and custom household options.</p>
 
@@ -2173,25 +2193,25 @@
 
     <!-- =======================================================================
          LUXURY QUOTE REQUEST / CONCIERGE FORM
-         ======================================================================= -->
+         ========================================================================= -->
     <section class="section section-white" id="quote">
       <div class="container quote-split">
-        <div class="quote-info-panel">
-          <p class="kicker">Bespoke Estimate</p>
+        <div>
+          <p class="kicker"><span class="kicker-dot"></span> Bespoke Estimate</p>
           <h2>Request Your Personalized Cleaning Quote.</h2>
           <p class="lead">Tell us about your residence and cleaning priorities. We will prepare an accurate, zero-obligation proposal tailored to your household.</p>
 
           <div class="quote-guarantee-list">
             <div class="quote-guarantee-item">
-              <span class="guarantee-bullet">✦</span>
+              <span class="guarantee-bullet">✓</span>
               <p><strong>Transparent & Fair Estimates</strong> — Tailored accurately to your residence's exact needs.</p>
             </div>
             <div class="quote-guarantee-item">
-              <span class="guarantee-bullet">✦</span>
+              <span class="guarantee-bullet">✓</span>
               <p><strong>Immediate Owner Direct Contact</strong> — Quick, personalized text or phone follow-up.</p>
             </div>
             <div class="quote-guarantee-item">
-              <span class="guarantee-bullet">✦</span>
+              <span class="guarantee-bullet">✓</span>
               <p><strong>Discretion & Total Respect</strong> — Licensed, experienced, and trusted in San Angelo.</p>
             </div>
           </div>
@@ -2210,7 +2230,7 @@
             <div class="form-grid">
               <div class="field">
                 <label for="name">Full Name *</label>
-                <input id="name" name="name" autocomplete="name" placeholder="e.g. Eleanor Vance" required>
+                <input id="name" name="name" autocomplete="name" placeholder="Eleanor Vance" required>
               </div>
 
               <div class="field">
@@ -2244,7 +2264,7 @@
               <div class="field">
                 <label for="homeSize">Approximate Residence Size</label>
                 <select id="homeSize" name="homeSize">
-                  <option value="Not sure">Select approximate square footage</option>
+                  <option value="Not sure">Select square footage</option>
                   <option value="Under 1,500 sq. ft.">Under 1,500 sq. ft.</option>
                   <option value="1,500–2,499 sq. ft.">1,500–2,499 sq. ft.</option>
                   <option value="2,500–3,499 sq. ft.">2,500–3,499 sq. ft.</option>
@@ -2257,27 +2277,27 @@
                 <div class="addons-grid">
                   <label class="addon-chip">
                     <input type="checkbox" name="addons" value="All-Tile Floors">
-                    <span>✨ All-Tile / Hardwood Care</span>
+                    <span>Tile & Hardwood Care</span>
                   </label>
                   <label class="addon-chip">
                     <input type="checkbox" name="addons" value="Heavy Dust Removal">
-                    <span>💨 West Texas Dust Removal</span>
+                    <span>West Texas Dust Removal</span>
                   </label>
                   <label class="addon-chip">
                     <input type="checkbox" name="addons" value="Oven Interior">
-                    <span>🍳 Oven Detailing</span>
+                    <span>Oven Detailing</span>
                   </label>
                   <label class="addon-chip">
                     <input type="checkbox" name="addons" value="Fridge Interior">
-                    <span>❄️ Refrigerator Clean</span>
+                    <span>Refrigerator Clean</span>
                   </label>
                   <label class="addon-chip">
                     <input type="checkbox" name="addons" value="Linen & Laundry">
-                    <span>🧺 Laundry & Linen Help</span>
+                    <span>Laundry & Linen Help</span>
                   </label>
                   <label class="addon-chip">
                     <input type="checkbox" name="addons" value="Pet Friendly">
-                    <span>🐾 Pet Friendly Protocol</span>
+                    <span>Pet Friendly Protocol</span>
                   </label>
                 </div>
               </div>
@@ -2336,7 +2356,7 @@
         <div>
           <div class="footer-title">Experience</div>
           <div class="footer-links">
-            <a href="#about">The Standard</a>
+            <a href="#about">Why Us</a>
             <a href="#process">How It Works</a>
             <a href="#reviews">Google Reviews (5.0)</a>
             <a href="#area">Service Area Map</a>
@@ -2350,7 +2370,7 @@
             <a href="tel:+13257165712">📞 (325) 716-5712</a>
             <a href="#area">📍 1210 Henry Ln, San Angelo, TX 76905</a>
             <span>🕒 Mon–Fri · 8:00 AM – 7:00 PM</span>
-            <a href="#quote" style="color: #ffd88a; font-weight: 700; margin-top: 6px;">✦ Request a Cleaning Quote</a>
+            <a href="#quote" style="color: #ffd88a; font-weight: 700; margin-top: 6px;">Request a Cleaning Quote →</a>
           </div>
         </div>
       </div>
@@ -2370,7 +2390,7 @@
       <span>Call Direct</span>
     </a>
     <a class="mobile-call-btn gold" href="#quote">
-      <span>✦ Request Quote</span>
+      <span>Request Quote</span>
     </a>
   </div>
 
@@ -2397,9 +2417,8 @@
     document.querySelectorAll(".faq-question").forEach(button => {
       button.addEventListener("click", () => {
         const item = button.closest(".faq-item");
-        const isOpen = item.classList.contains("open");
         
-        // Optional: close other open items for luxury clean accordion
+        // Close other open items
         document.querySelectorAll(".faq-item").forEach(other => {
           if (other !== item) {
             other.classList.remove("open");
