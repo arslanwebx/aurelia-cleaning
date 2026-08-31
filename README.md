@@ -1,4 +1,4 @@
-# Sugar In The Morning Cleaning Service
+# Aurelia Luxury Cleaning
 
 Static single-page website prepared for GitHub and Vercel deployment.
 
