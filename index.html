@@ -245,37 +245,29 @@
     .brand:hover { transform: translateY(-1px); }
     .brand-mark {
       display: grid; place-items: center;
-      width: 42px; height: 42px;
-      border-radius: 11px;
+      width: 44px; height: 44px;
+      border-radius: 12px;
       background: linear-gradient(135deg, #184c43 0%, #0b201c 100%);
       border: 1.5px solid rgba(197, 160, 89, 0.45);
       color: #faf5ea;
       font-family: var(--font-heading);
       font-weight: 800;
-      font-size: 1.35rem;
+      font-size: 1.4rem;
       box-shadow: 0 4px 12px rgba(11, 32, 28, 0.15);
     }
-    .brand-copy { line-height: 1.15; }
     .brand-name {
-      display: block;
+      display: inline-block;
       font-family: var(--font-heading);
-      font-size: 1.05rem;
+      font-size: 1.48rem;
       font-weight: 800;
-      letter-spacing: -0.015em;
-      color: var(--ink);
+      letter-spacing: -0.03em;
+      color: var(--green);
+      line-height: 1;
+      transition: color 0.2s ease;
     }
-    .brand-sub {
-      display: flex;
-      align-items: center;
-      gap: 5px;
-      margin-top: 3px;
-      color: var(--text-muted);
-      font-size: 0.72rem;
-      font-weight: 600;
-      letter-spacing: 0.04em;
-      text-transform: uppercase;
+    .brand:hover .brand-name {
+      color: var(--green-accent);
     }
-    .brand-sub-dot { color: var(--gold); }
 
     /* Center Nav Links */
     .nav-links {
@@ -1752,7 +1744,6 @@
       border-color: rgba(197, 160, 89, 0.45);
     }
     .footer-brand .brand-name { color: white; }
-    .footer-brand .brand-sub { color: rgba(255, 255, 255, 0.6); }
     .footer-desc {
       font-size: 0.91rem;
       line-height: 1.7;
@@ -1852,7 +1843,7 @@
       .section { padding: 72px 0; }
       .announcement { font-size: 0.76rem; }
       .announcement-badge { display: none; }
-      .brand-sub { display: none; }
+      .brand-name { font-size: 1.25rem; }
       
       h2 { font-size: clamp(1.9rem, 8vw, 2.5rem); }
       
@@ -1926,16 +1917,9 @@
   <!-- NAVIGATION HEADER -->
   <header>
     <div class="container nav">
-      <a class="brand" href="#top" aria-label="Aurelia Luxury Cleaning home">
+      <a class="brand" href="#top" aria-label="Aurelia Cleaning home">
         <span class="brand-mark" aria-hidden="true">A</span>
-        <span class="brand-copy">
-          <span class="brand-name">Aurelia</span>
-          <span class="brand-sub">
-            <span>Luxury Cleaning</span>
-            <span class="brand-sub-dot">·</span>
-            <span>San Angelo, TX</span>
-          </span>
-        </span>
+        <span class="brand-name">Aurelia Cleaning</span>
       </a>
 
       <nav class="nav-links" id="navLinks" aria-label="Primary navigation">
@@ -2831,12 +2815,9 @@
     <div class="container">
       <div class="footer-grid">
         <div class="footer-brand">
-          <a class="brand" href="#top" aria-label="Aurelia Luxury Cleaning home">
+          <a class="brand" href="#top" aria-label="Aurelia Cleaning home">
             <span class="brand-mark" aria-hidden="true">A</span>
-            <span class="brand-copy">
-              <span class="brand-name">Aurelia</span>
-              <span class="brand-sub">Luxury Cleaning · San Angelo</span>
-            </span>
+            <span class="brand-name">Aurelia Cleaning</span>
           </a>
           <p class="footer-desc">White-glove residential housekeeping, deep home restoration, and bespoke estate care in San Angelo, Texas.</p>
         </div>
